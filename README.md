@@ -1,4 +1,9 @@
-### Hi there 👋
+### Welcome to my GitHub!
+
+Here I share code I worked on for whatever reason. Snippets from hobby projects and work. I do not maintain these, feel free to build on them, make them better, I really just put them here so they are out of my system.
+
+If you have any questions about my stuff, need help using them, feel free to contact me at nikhazy.akos at gmail. I tend to answer emails in a day or so.
+
 
 <!--
 **akosnikhazy/akosnikhazy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
