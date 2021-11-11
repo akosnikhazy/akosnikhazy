@@ -1,0 +1,107 @@
+html,body,div,span,applet,object,iframe,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+body{
+	font-family:"CourierNew";
+	background-color: #fefefe;
+	height:100%;
+}
+body,.post a{
+	color: #333;
+}
+h1{
+	background:#666;
+	text-align:center;
+	padding:10px;
+	margin:0;
+	color: #efefef;
+	margin-bottom: 10px;
+}
+h2,h3{
+	font-weight: 800;
+	font-family:arial;
+	
+}
+
+article{
+	padding:30px;
+	border: 1px solid #666;
+	max-width:800px;
+	margin: 0 auto;
+	font-size: 17px;
+    line-height: 1.7em;
+	font-family: nunito,Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+p{
+	margin-bottom:5px;
+	padding: 0 40px 20px 0;
+}
+
+footer{
+	text-align: center;
+	color: #666;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	border-top: 1px solid #666;
+	background: #efefef;
+}
+
+#darkmode{
+	background-color:#eee;
+	position: fixed;
+	z-index:999;
+	top: 2px;
+	right: 2px;
+	padding: 5px;
+	width: 110px;
+	cursor: pointer;
+}
+.post{
+	width: 90%;
+	display: flex;
+	align-items:center;
+	border: 2px solid #333;
+	background: #fdfdfd;
+	margin: 20px auto;
+	box-shadow: -5px -5px #333,5px 5px #333;
+	padding:25px;
+	padding-left:50px;
+}
+.post,.posticon{
+	display: flex;
+	align-items:center;
+}
+.post h2{
+	margin:0;
+}
+
+.post a{
+	text-decoration: none;
+}
+.post a:hover{
+	text-decoration: underline;
+	color: #666;
+}
+.posticon{
+	width: 100px;
+	height:100px;
+	margin-right: 10px;
+	 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.posttitle{
+	
+}
+.lightsoff{
+	-webkit-filter: invert(100%);
+	background-color: #333;
+}
+
+@media screen and (min-width: 871px) {
+  article {
+    width: 100%;
+  }
+}
