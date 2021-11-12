@@ -7,6 +7,8 @@ const html 	= document.getElementsByTagName('html');
 const imgTags = document.querySelectorAll('img');
 
 function invertImgs(l){
+	if(0 == imgTags.length) return; // why bother when there are no images
+	
 	if(1 == l)
 	{
 		imgTags.forEach(function(item,i){
