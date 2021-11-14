@@ -111,4 +111,11 @@ footer{
   article {
     width: 100%;
   }
+	.post{
+	   padding: 5px;
+		
+	}
+	.post h2{
+		font-size: 14px;
+	}
 }
