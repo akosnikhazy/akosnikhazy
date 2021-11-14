@@ -107,7 +107,7 @@ footer{
 	background-color: #333;
 }
 
-@media screen and (min-width: 871px) {
+@media screen and (max-width: 871px) {
   article {
     width: 100%;
   }
