@@ -68,7 +68,7 @@ function consoleAdventure(level){
     'I never cried about that... trust me!',
     'It is ture.',
     'It is true too.',
-    'If I want this infinite I will use some deepl learning engine to generate funny lines',
+    'If I want this infinite I will use some deep learning engine to generate funny lines',
     'Yet its something',
     'nothing at',
     'nothing at all... get it?',
