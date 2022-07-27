@@ -160,7 +160,7 @@ let levelsHTML = [
   'Just kidding',
   'I play videogames on bunch of different platforms. I record my silly <a href="https://www.trueachievements.com/gamer/Yzahkin" target="_blank">achievements</a> on Xbox, and <a href="https://www.truetrophies.com/gamer/yzahkin" target="_blank">trophies</a> on PS. I aim for 100% but almost never do it, because I respect my time. Yet it is fun to try.',
   'That was boring... sorry about that. So here. Look at one of my 3D models. I am not good at this, but enjoy doing it <br><img src="images/3d-art.jpg" alt="CG image of alien ship">',
-  'But enough about me. Plese tell me about you!',
+  'But enough about me. Please tell me about you!',
   'Oh there is no form? Well you can contact me on <a href="mailto:nikhazy.akos@gmail.com" target="_blank">email</a> or any of the sites you find me. Sorry this is just a silly HTML page you refreshed for what... 11 times? Good for you.',
   'And you want more?',
   'Really?',
