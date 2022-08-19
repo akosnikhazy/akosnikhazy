@@ -210,7 +210,7 @@ let levelsHTML = [
   'For $2 do not except much.',
   '$3! In this economy it is worth nothing, but keep reloading!',
   'My paypal is the same as my email address. Feel free to send the $4 there.',
-  'Five bucks! For this much I give you a nice trivia: it is called bucks, because in the USA deer skin were worth $1. A buck. Now you are a dept of 5 deer skins.',
+  'Five bucks! For this much I give you a nice trivia: it is called bucks, because in the USA deer skin were worth $1. A buck. Now you are in dept of 5 deer skins.',
   'I could just write code that counts upwards from here on now... I might do that.',
   '$7',
   '$8',
