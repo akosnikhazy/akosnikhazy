@@ -150,7 +150,7 @@ document.getElementById("cookies").addEventListener("click",function(){
 
 let levelsHTML = [
   '',
-  'OK. You accepted those pesky cookies so we can move along. But nothing is here... that might be an error. Try refresh? Please press F5 or pull down the site on phone.',
+  'OK. You accepted those pesky cookies so we can move along. But nothing is here... that might be an error. Try refresh? Please press F5 or refresh another way.',
   '....Now is it a different text? Controls by refreshing? Well as you are here, you can check out <a href="https://github.com/akosnikhazy" target="_blank">my GitHub</a>',
   'Yeah it seems really reacts to refreshing the page. How about some hobby stuff then? <a href="https://instagram.com/yzahkin" target="_blank">Photography</a>? Look at that Moon I photographed with some vintage mirror lens!',
   '<img src="images/moon.jpg" alt="Moon photographed with vintage mirror lens">',
@@ -237,7 +237,7 @@ let levelsHTML = [
   'When you go back to the start, I will forget everything I just said. I might say the same things. Please: visit the links, follow me on those pages, give me some love that way.',
   'Here we go again!',
   'HI! I am Ákos, this is my site.<br>To continue You might want to accept cookies: <button onclick="location.reload()">Okay... okay... I accept</button>',
-  'OK. You accepted those pesky cookies so we can move along. Something feels wrong... But nothing is here... that might be an error. Try refresh? Please press F5 or pull down the site on phone.',
+  'OK. You accepted those pesky cookies so we can move along. Something feels wrong... But nothing is here... that might be an error. Try refresh? Please press F5 or refresh another way.',
   '....Now is it a different text? Controls by refreshing? ... Seems familiar... Well as you are here, you can check out <a href="https://github.com/akosnikhazy" target="_blank">my GitHub</a>',
   'Yeah it seems really reacts to refreshing the page. How about some hobby stuff then? <a href="https://instagram.com/yzahkin" target="_blank">Photography</a>? Look at that Moon I photographed with some vintage mirror lens!',
   '&#127765;',
