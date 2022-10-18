@@ -275,6 +275,6 @@ if(level > 0)
   }
 
 } else {
-  console.log("%cHello fellow developer! Nice to see you here! Yeah it is basic. Now enjoy the loop of reload.", "color: red; font-size: x-large");
+  console.log("%cHello fellow developer! Nice to see you here! Yeah it is very basic. Now enjoy the loop of reload.", "color: red; font-size: x-large");
   document.getElementById("first").style.display = "inline";
 }
