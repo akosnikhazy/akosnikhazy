@@ -5,18 +5,130 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hi</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
+    <title>What I do now?</title>
+    <link rel="icon" href="data:image/gif;base64,R0lGODlhGQAZAKIAAAAAAP///8fFxfHx8QwMDAAAAAAAAAAAACwAAAAAGQAZAAADTCi63P4wykmrbSTnu/L4IHERn+Z9FWmuqKSyYQu9J2hHdG2D82DuwN4PeHvkiEXHESlT+jRM11O3m+RIVQoWNhhhbSKOYCUum8/oSwIAOw==">
+	<style>
+		*{
+			scrollbar-width: thin;
+			box-sizing: border-box;
+		}
+		html{
+			background:#222831;
+			color:#F2F2F2;
+			font-family: Inter,Helvetica,Arial,sans-serif;
+			scrollbar-width: thin;
+			line-height: 1.5;
+		}
+		div{display:flex}
+		article{
+			background:#393E46;
+			padding:10px;
+			width:900px;
+			font-size: .95rem;
+			-webkit-border-radius: 4px 4px 4px 4px;
+			border-radius: 4px 4px 4px 4px;
 
+		}
+		nav{
+			color:#F2F2F2;
+			padding:10px;
+			width:20%;
+		}
+		h1{
+			font-size: 1.99rem
+		}
+		a{
+			color:#F96D00;
+			text-decoration:none;
+		}
+		a:hover{
+			text-decided:underline;
+		}
+		p{
+			margin: 5px;
+		}
+		#fun{
+			border-right: 1px solid #F96D00;
+			animation: blink 0.7s step-end infinite;
+        }
+		
+	
+		
+		@keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #F96D00;
+            }
+        }
+		
+	</style>
+	<base target="_blank">
+  </head>
   <body>
-    <div id="container">
-      <div id="present">
-        <span id="first">HI! I am Ákos, this is my site.<br>To continue You might want to accept cookies: <button id="cookies">Okay... okay... I accept</button></span>
-        <noscript>As javascript is off, you are missing out of this existential crisis of a website, but <a href="old.html" target="_blank">here is the old version of the site</a></noscript>
-      </div>
-    </div>
-    <a rel="me" href="https://ohai.social/@yzahkin"></a>
+	<div>
+		<article>
+			<h1>Things I do these days (now my website is a wall of text!)</h1>
+			<h2>Untitled generic logic game</h2>
+			<p>I am developing a game from scratch for Steam release. It will be a functional game that I do not want to be big or famous, my prediction is that it will not even make back the Steam release fee.</p>
+			<p>The only reason I am making this game is because I like the idea of making games as a hobby and I want to make a project from the beginning to release instead of small projects that go nowhere.</p>
+			<p>I use Unity 3D and C# to develop the game, and Blender for the assets. Every problem I face is a learning experience. I blog about the game's development of the game on <a href="https://www.linkedin.com/in/akosnikhazy/">LinkedIn of all places</a>.</p>
+			
+			<h2>Open source, single user financial web application</h2>
+			<p>Since I was a child, I have always documented my money. I started in a notebook. Then I used a very complicated Google Sheet for many years. Now I use GNU Cash to manage my finances like a business.</p>
+			<p>I like double-entry bookkeeping, but GNU Cash is way too offline and I have to enter my money data at the end of the day instead. I have tried other applications, but everything is way too complicated, and you need trust to keep this information online.</p>
+			<p>So I decided to develop my own simple application. I will host it on a VPS for myself. So I can use it and enter my data on the go. It will also be free and open source for others who want something like this in their lives.</p>
+			
+			<h2>Some things I did and still like to have around</h2>
+			<p>My hobby of creating random things online generates things like the <a href="https://akosnikhazy.github.io/iro-sudoku/">Color Sudoku</a> game where you solve puzzles without numbers. A more serious thing is <a href="https://akosnikhazy.github.io/self-contained-encrypter1.1/">the self contained encrypter</a>. It can generate an HTML file that asks for a password to decrypt the text or even images you put in it. It also works offline.</p>
+			<p>Once I even made a tool to <a href="https://github.com/akosnikhazy/Budapest-Temperature">visualise temperature data</a>. It creates an image where each row is a year and each column is a day. I am just happy with how it turned out.</p>
+		
+			<h2>Social media</h2>
+			<p>I try to keep my social media presence to a minimum, other than registering on each of them out of professional curiosity. So you might find me in many places only to find nothing.</p>
+			<p>I actively use <a href="https://instagram.com/akoslives">Instagram</a> to capture random daily things that pique my interest (and there's also a link to my infrequently updated photography profile).</p>
+			<p>I also use <a href="https://twitter.com/nikhazyakos">the exBird app</a>, but it is incoherent and doesn't really worth to follow.</p>
+			
+			<h2>Work</h2>
+			<p>This website is about my personal stuff that I do online. Professionally, I have a job that I will not talk about more than this: It is a developer job. I use web technologies, Python, C# and other technologies on a daily basis to help manage a 10k strong company.</p>
+		</article>
+		<nav>
+			<h2>Links:</h2>
+			<ul>
+				<li><a href="https://github.com/akosnikhazy">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/akosnikhazy/">LinkedIn</a></li>
+				<li id="funholder"><a href="https://yzahk.in/funnyold" id="fun">Before this homepage I had a funnier one</a></li>
+			</ul>
+		</nav>
+	</div>
+	<script>
+		"use strict";
+        const fun = document.getElementById('fun');
+        const originalText = fun.textContent;
+		
+		let timer;
+		let typeSpeed = 50;
+
+        fun.textContent = '?';
+
+        function revealText() {
+            let currentIndex = fun.textContent.length;
+            if (currentIndex < originalText.length) {
+                fun.textContent = originalText.slice(0, currentIndex + 1);
+                timer = setTimeout(revealText, typeSpeed); 
+            }
+        }
+
+        fun.addEventListener('mouseover', function() {
+            clearTimeout(timer); 
+            fun.textContent = '?'; 
+            revealText(); 
+        });
+
+        fun.addEventListener('mouseout', function() {
+            clearTimeout(timer); 
+            fun.textContent = '?'; 
+        });
+	</script>
   </body>
-  <script src="js/flow.js"></script>
 </html>
