@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<!--
+		Hi there! Here others put a lot of meta data to SEO their page, but I do not really care about that in this case.
+		The reason is that you are coming from a link anyway, I don't think anyone would search for me directly and even if they did
+		they would find my other social media pages first.
+		
+		So I just put this message here.
+	-->
     <title>What I do now?</title>
     <link rel="icon" href="data:image/gif;base64,R0lGODlhGQAZAKIAAAAAAP///8fFxfHx8QwMDAAAAAAAAAAAACwAAAAAGQAZAAADTCi63P4wykmrbSTnu/L4IHERn+Z9FWmuqKSyYQu9J2hHdG2D82DuwN4PeHvkiEXHESlT+jRM11O3m+RIVQoWNhhhbSKOYCUum8/oSwIAOw==">
 	<style>
@@ -20,11 +26,16 @@
 			scrollbar-width: thin;
 			line-height: 1.5;
 		}
-		div{
-			flex-wrap: wrap;
-			max-width:1200px;
-			display:flex
+		
+		a{
+			color:#F96D00;
+			text-decoration:none;
 		}
+		
+		a:hover{
+			text-decoration:underline;
+		}
+		
 		article{
 			background:#393E46;
 			padding:10px;
@@ -35,30 +46,47 @@
 			border-radius: 4px 4px 4px 4px;
 
 		}
-		nav{
-			color:#F2F2F2;
-			padding:10px;
-			width:200px;
+		
+		div{
+			flex-wrap: wrap;
+			max-width:1200px;
+			display:flex
 		}
+		
+		nav{
+			
+			padding:10px;
+			height:200px;
+		}
+		
+		aside{
+			padding: 5px;
+		
+		}
+		
 		h1{
 			font-size: 1.99rem
 		}
-		a{
-			color:#F96D00;
-			text-decoration:none;
-		}
-		a:hover{
-			text-decoration:underline;
-		}
+		
 		p{
 			margin: 5px;
 		}
+		
 		#fun{
 			border-right: 1px solid #F96D00;
 			animation: blink 0.7s step-end infinite;
         }
 		
-	
+		#right{
+			color:#F2F2F2;
+			width:200px;
+			display:flex;
+			flex-direction:column;
+		}
+		
+		.smoll{
+			font-size:.7rem;
+		}
 		
 		@keyframes blink {
             from, to {
@@ -68,6 +96,15 @@
                 border-color: #F96D00;
             }
         }
+		
+		@media only screen and (max-width: 1115px) {
+			#right{
+				color:#F2F2F2;
+				width:900px;
+				display:flex;
+				flex-direction:row;
+			}
+		}
 		
 	</style>
 	<base target="_blank">
@@ -98,14 +135,29 @@
 			<h2>Work</h2>
 			<p>This website is about my personal stuff that I do online. Professionally, I have a job that I will not talk about more than this: It is a developer job. I use web and other technologies, several programming languages on a daily basis to help manage a 10k strong company. Company policy doesn't allow me to speak publicly about my work.</p>
 		</article>
-		<nav>
-			<h2>Links:</h2>
-			<ul>
-				<li><a href="https://github.com/akosnikhazy">GitHub</a></li>
-				<li><a href="https://www.linkedin.com/in/akosnikhazy/">LinkedIn</a></li>
-				<li id="funholder"><a href="https://yzahk.in/funnyold" id="fun">Before this homepage I had a funnier one</a></li>
-			</ul>
-		</nav>
+		<div id="right">
+			<nav>
+				<h2>Links:</h2>
+				<ul>
+					<li><a href="https://github.com/akosnikhazy">GitHub</a></li>
+					<li><a href="https://www.linkedin.com/in/akosnikhazy/">LinkedIn</a></li>
+					<li id="funholder"><a href="https://yzahk.in/funnyold" id="fun">Before this homepage I had a funnier one</a></li>
+				</ul>
+			</nav>
+			<aside>
+			<h2>About:</h2>
+			<p>
+			This page is created by Ákos Nikházy. Hosted by GitHub in <a href="https://github.com/akosnikhazy/akosnikhazy/">this repository</a>
+			</p>
+			<h2>Contact</h2>
+			<p>
+			You can contact me on email:<br> <a href="mailto:kjyz36qv1@mozmail.com">kjyz36qv1@mozmail.com</a> <span class="smoll">(Do not fret, it is a <a href="https://relay.firefox.com/">relay</a> to protect my inbox, I will answer you from the real one.)</span>
+			</p>
+			<p>
+				Also feel free to message me on any social media you find me.
+			</p>
+			</aside>
+		</div>
 	</div>
 	<script>
 		"use strict";
@@ -135,6 +187,9 @@
             clearTimeout(timer); 
             fun.textContent = '?'; 
         });
+		
+		console.log("%cWhat do you except to find in the console in a simple HTML page?", "color: red; font-size: x-large");
+		console.error("You are hacked... jk");
 	</script>
   </body>
 </html>
