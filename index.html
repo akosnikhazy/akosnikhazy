@@ -97,7 +97,24 @@
 		.smoll{
 			font-size:.7rem;
 		}
-		
+		.downloadbtn{
+			display:block;
+			margin:10px auto;
+			width: 150px;
+			-webkit-border-radius: 20px 20px 20px 20px;
+			border-radius: 20px 20px 20px 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+		.downloadbtn:hover{
+			background: #666;
+			color: #fefefe;
+		}
+		.downloadbtn:hover::after{
+			content:" 🔗 itch.io";
+			font-size:10px;
+		}
 		@keyframes blink {
             from, to {
                 border-color: transparent;
@@ -116,22 +133,41 @@
 			}
 		}
 		
+		hr{
+			border:1px dashed #666;
+			margin-bottom: 20px;
+		}
+
 	</style>
 	<base target="_blank">
   </head>
   <body>
 	<div>
 		<article>
-			<h1>Things I do these days (now my website is a wall of text!)</h1>
+			<h1>Games and other stuff that I have made</h1>
+
 			<h2>A 🐷 puzzle game</h2>
 			<p>I am developing a game from scratch for Steam release with a pig as main character. For all ages. It will be a puzzle game that I do not want to be big or famous, my prediction is that it will not even make back the Steam release fee.</p>
 			<p>The only reason I am making this game is because I like the idea of making games as a hobby and I want to make a project from the beginning to release instead of small projects that go nowhere.</p>
 			<p>I use Unity 3D and C# to develop the game, and Blender for the assets. Every problem I face is a learning experience. I blog about its development on <a href="https://www.linkedin.com/in/akosnikhazy/">LinkedIn of all places</a> and I have created a <a href="https://twitter.com/YzahkinGames">new X profile</a> for all my gaming endeavours.</p>
-			
-			<h2>Some things I made and still like to have around</h2>
-			<p>My hobby of creating random things online generates things like the <a href="https://akosnikhazy.github.io/iro-sudoku/">Color Sudoku</a> game where you solve puzzles without numbers. Speaking of numbers: My <a href="https://akosnikhazy.github.io/cistercian-numerals/">Cistercian numeral generator</a> will give you hours of medieval fun! A more serious thing is <a href="https://akosnikhazy.github.io/self-contained-encrypter1.1/">the self contained encrypter</a>. It can generate an HTML file that asks for a password to decrypt the text or even images you put in it. It also works offline.</p>
+			<hr>
+			<h2>An "every game" I never finished</h2>
+			<p>This was a project to learn Unity. I started it in 2017. My idea was that it would be an "every game" game so I learn different game types. I lost my motivation after two levels. I kept the game though. You can try it by downloading it from itch.io<br>
+			<a href="https://yzahkin.itch.io/cube-pig-not-even-a-game-game" class="downloadbtn">Download</a>
+			</p>
+
+			<h2>My short lived HTML game adventure</h2>
+			<p>When Flash finally died for the good of the internet, I tried to jump on HTML5. But it was just not the same for making games. I missed tweens and keyrames, and I still did not like Javascript as much as ActionScript 2. Nevertheless I made <a href="https://akosnikhazy.github.io/iro-sudoku/">Color Sudoku</a> a game where you solve puzzles without numbers. It is a very unfinished attempt at a game, but I had enough fun with the idea. It is free and open source.</p>
+
+			<p>Also this was the time when Nintendo dropped the free picross games on 3DS. And I instantly wanted to make my own <a href="https://akosnikhazy.github.io/Javascript-Picross-Game/">Javascript Picross Game</a>. It is still functional. And ugly.</p>
+			<hr>
+			<h2>Small Flash Games</h2>
+			<p>Back when Flash was a thing in the early 10's <a href="https://yzahkin.newgrounds.com/games">I created several small games</a>. They are still working thanks to Newgrounds' swf player. They are indeed small, the longest I worked on them was a month maximum. And reused a lot of code. Most of them use the now defunct Mochi Games API, so no leaderboards work in any of them anymore. On the other hand some of the games still use the Newground API and they have achievements to earn.</p>
+			<hr>
+			<h2>Some other things I made and still like to have around</h2>
+			<p>My <a href="https://akosnikhazy.github.io/cistercian-numerals/">Cistercian numeral generator</a> will give you hours of medieval fun! A more serious thing is <a href="https://akosnikhazy.github.io/self-contained-encrypter1.1/">the self contained encrypter</a>. It can generate an HTML file that asks for a password to decrypt the text or even images you put in it. It also works offline.</p>
 			<p>Once I even made a tool to <a href="https://github.com/akosnikhazy/Budapest-Temperature">visualise temperature data</a>. It creates an image where each row is a year and each column is a day. I am just happy with how it turned out.</p>
-		
+			<hr>
 			<h2>Social media</h2>
 			<p>I try to keep my social media presence to a minimum, other than registering on each of them out of professional curiosity. So you might find me in many places only to find nothing.</p>
 			<p>I actively use <a href="https://instagram.com/akoslives">Instagram</a> to capture random daily things that pique my interest (and there's also a link to my infrequently updated photography profile).</p>
