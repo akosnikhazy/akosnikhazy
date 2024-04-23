@@ -4,7 +4,7 @@ Here I share code I worked on for whatever reason. [Snippets](https://github.com
 
 If you have any questions about my stuff, need help using them, feel free to contact me at nikhazyakos 🐚 proton • me. I tend to answer emails in a day or so.
 
-This repository also acts as a server for my domain [yzahk.in](https://yzahk.in). I put my links on it and change the whole thing from time to time. Check it out!
+This repository also acts as a server for my domain [yzahk.in](https://yzahk.in). I put my links on it and change the whole thing from time to time. Now it is about my game development journey! Check it out!
 
 
 <!--
