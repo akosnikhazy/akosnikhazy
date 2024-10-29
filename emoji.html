@@ -1121,28 +1121,33 @@ cursor:pointer;
 <a href="https://gist.githubusercontent.com/suntong/3d411a7e7e737efb2502a17d4ce01d62/raw/a72d1c60cfa0abc7163e739e3944319c4eac024e/Unicode%2520official%2520emojis.md">Based on this useful list</a></span>
 <script>
  function copyFirstCharacterToClipboard(event) {
-            const spanText = event.target.textContent;
-            if (spanText.length > 0) {
-                const firstCharacter = spanText.charAt(0);
-                
-
-                const textarea = document.createElement('textarea');
-                textarea.value = firstCharacter;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                
-				 message.style.display = 'block';
+           
+           
+             
+                var range = document.createRange(); 
+				var emoji = event.target;
+				
+				var parts = event.target.textContent.split(" ");
+				
+				emoji.textContent = parts[0];
+				
+				range.selectNode(emoji);
+				
+				window.getSelection().addRange(range);
 				 
-
+				document.execCommand('copy');
+				 
+				 
+				message.style.display = 'block';
+				 
+				emoji.textContent = parts.join(" ");
 				
 				setTimeout(function() {
 					message.style.display = 'none';
 				}, 3000);
                 
             }
-        }
+        
 		const spans = document.querySelectorAll('span');
         spans.forEach(span => {
             span.addEventListener('click', copyFirstCharacterToClipboard);
