@@ -6,7 +6,7 @@ If you have any questions about my stuff, need help using them, feel free to con
 
 This repository also acts as a server for my domain [yzahk.in](https://yzahk.in). I put my links on it and change the whole thing from time to time. Now it is about my game development journey! Check it out!
 
-
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q819NGCR)
 <!--
 **akosnikhazy/akosnikhazy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
