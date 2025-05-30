@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="This page provides an example of how the Diffie-Hellman key exchange works. It is only a visual representation of the algorithm to help you understand it.">
     <title>🔐 Diffie-Hellman (unsafe) example</title>
 	<base target="_blank">
 	<style>
@@ -90,7 +90,7 @@
 	<h1>Diffie-Hellman key exchange</h1>
 	<div id="introduction">
 	<p>
-		This is just a small example of the algorithm itself. In real-life situations, you should use calculations involving mudulo prime numbers to ensure maximum security. This example only shows the logic of how two actors in a key exchange can know the same secret key without transferring it publicly. Try changing the common or secret value of the actors to see how all the numbers change.
+		This is just a small example of the algorithm itself. In real-life situations, you should use the multiplicative group of integers modulo p, where p is prime, and g is a primitive root modulo p to ensure maximum security. This example only shows the logic of how two actors in a key exchange can know the same secret key without transferring it publicly. Try changing the common or secret value of the actors to see how all the numbers change. The input fields are color-coded to show which numbers are the same, step by step.
 		<br>For more information <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">visit the Wikipedia page</a>.
 		<br>
 		<br>Coloring: <input type="checkbox" id="coloring" checked>
