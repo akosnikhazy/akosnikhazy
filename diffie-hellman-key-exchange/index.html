@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>🔐 Diffie-Hellman (unsafe) example</title>
+	<base target="_blank">
+	<style>
+	*{
+		box-sizing:border-box;
+	}
+	html{
+		background: #efefef;
+	}
+	h1{
+		text-align:center;
+	}
+	a{
+		color: #666;
+	}
+	a:hover::after{
+		content: "🔗";
+		font-size:0.8em;
+	}
+	#introduction,#algo,#explain,footer{
+		max-width:800px;
+		border: 1px solid #ccc;
+		margin:15px auto;;
+		background: #fefefe;
+		padding:15px;
+		font-family:arial;
+		border-radius: 15px;
+	}
+	#introduction,#explain{
+		font-size:0.9em;
+	}
+	#algo div{
+		display:inline-block;
+		width: 32%;
+		
+		text-align: center;
+		height: 30px;
+		padding:5px;
+	}
+	input{
+		border: 1px solid #666;
+		padding: 5px;
+		border-radius:5px;
+	}
+	.commonvalue{
+		background-color: #2596be;
+	}
+	.secretvalueA{
+		background-color: #EC1E18;
+		color: #fefefe;
+	}
+	.secretvalueB{
+		background-color:#1a0000;
+		color: #fefefe;
+	}
+	.publicvalueA{
+		background-color:#004d00;
+		color: #fefefe;
+	
+	}
+	
+	.publicvalueB{
+		background-color:#009900;
+		color: #fefefe;
+	
+	}
+	
+	.coff{
+		background-color: #fff!important;
+		color:#000!important;
+	}
+	
+	footer{
+		font-size:12px;
+		color: #777;
+	}
+</style>
+  </head>
+  <body>
+	<h1>Diffie-Hellman Key exchange</h1>
+	<div id="introduction">
+	<p>
+		This is just a small example of the algorithm itself. In real-life situations, you should use calculations involving mudulo prime numbers to ensure maximum security. This example only shows the logic of how two actors in a key exchange can know the same secret key without transferring it publicly.
+		<br>For more information <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">visit the Wikipedia page</a>.
+		<br>
+		<br>Coloring: <input type="checkbox" id="coloring" checked>
+	</p>
+	</div>
+	
+	<div id="algo">
+		<div>Actor A</div>
+		<div> </div>
+		<div>Actor B</div>
+		<br>
+		<div><input type="number" value="5" class="commonvalue"></div>
+		<div>Common value</div>
+		<div><input type="number"  value="5" class="commonvalue"></div>
+		<br>
+		<div>+</div>
+		<div></div>
+		<div>+</div>
+		<br>
+		<div><input type="number" value="6" class="secretvalueA"></div>
+		<div>Secret value</div>
+		<div><input type="number" value="4" class="secretvalueB"></div>
+		<br>
+		<div>=</div>
+		<div></div>
+		<div>=</div>
+		<br>
+		<div><input type="number" value="11" class="publicvalueA" readonly></div>
+		<div>New Public value</div>
+		<div><input type="number" value="9" class="publicvalueB" readonly></div>
+		<br>
+		<div>➡️</div>
+		<div>🔀 Exchanged values</div>
+		<div>⬅️</div>
+		<br>
+		<div><input type="number" value="9" class="publicvalueB" readonly></div>
+		<div>Exchanged public value</div>
+		<div><input type="number" value="11" class="publicvalueA" readonly></div>
+		<br>
+		<div>+</div>
+		<div></div>
+		<div>+</div>
+		<br>
+		<div><input type="number" value="6" class="secretvalueA"></div>
+		<div>Secret value</div>
+		<div><input type="number" value="4" class="secretvalueB"></div>
+		<br>
+		<div>=</div>
+		<div></div>
+		<div>=</div>
+		<br>
+		<div><input type="number" value="15" class="resultA" readonly></div>
+		<div>The finished secret key</div>
+		<div><input type="number" value="15"  class="resultB" readonly></div>
+	</div>
+	
+	<div id="explain">
+	What happens in this example step by step:
+	<ol>
+		<li>Both actors agree on a common value. This is public information.</li>
+		<li>Each actor has a secret value. This value should never be revealed and should never leave its owner.</li>
+		<li>Both actors add their own secret value to the common value. The result is a new public value.</li>
+		<li>The actors exchange the new public values.</li>
+		<li>Both actors add their own secret value to the exchanged public value. This results in a secret key known only by them, calculated and stored from different values.</li>
+	</ol>
+	</div>
+	<footer>
+		Created by <a href="https://github.com/akosnikhazy">Ákos Nikházy</a>
+	</footer>
+	<script>
+	
+	function addUpdateValuesListener(inputClass)
+	{
+		inputClass.forEach(input => {
+		  input.addEventListener('input', function() {  
+			const changedValue = this.value;
+			inputClass.forEach(otherInput => {
+			  if (otherInput !== this) { 
+				otherInput.value = changedValue;
+			  }
+			});
+			calculateValues();
+		  });
+		});
+		
+		
+	}
+	
+	function calculateValues()
+	{
+	
+		publicValueAInputs.forEach(input => {
+		  input.value = parseInt(commonValueInputs[0].value) + parseInt(secretValueAInputs[0].value);
+		});
+		
+		publicValueBInputs.forEach(input => {
+		  input.value = parseInt(commonValueInputs[0].value) + parseInt(secretValueBInputs[0].value);
+		});
+		
+		resultValueAInputs.forEach(input => {
+			input.value = parseInt(secretValueAInputs[0].value) + parseInt(publicValueBInputs[0].value);
+		});
+		
+		resultValueBInputs.forEach(input => {
+			input.value = parseInt(secretValueBInputs[0].value) + parseInt(publicValueAInputs[0].value);
+		});
+		
+	}
+	
+	function updateNumberInputClasses() {
+        if (!coloringCheckbox.checked) {
+            numberInputs.forEach(input => {
+                input.classList.add('coff');
+            });
+			
+			return;
+        } 
+ 
+        numberInputs.forEach(input => {
+            input.classList.remove('coff');
+        });
+        
+    }
+	
+	const commonValueInputs  = document.querySelectorAll('.commonvalue');
+	const secretValueAInputs = document.querySelectorAll('.secretvalueA');
+	const secretValueBInputs = document.querySelectorAll('.secretvalueB');
+	const publicValueAInputs = document.querySelectorAll('.publicvalueA');
+	const publicValueBInputs = document.querySelectorAll('.publicvalueB');
+	const resultValueAInputs = document.querySelectorAll('.resultA');
+	const resultValueBInputs = document.querySelectorAll('.resultB');
+	
+	const coloringCheckbox = document.getElementById('coloring');
+    const numberInputs = document.querySelectorAll('input[type="number"]');
+	
+	addUpdateValuesListener(commonValueInputs);
+	addUpdateValuesListener(secretValueAInputs);
+	addUpdateValuesListener(secretValueBInputs);
+	
+	
+	coloringCheckbox.addEventListener('change', updateNumberInputClasses);
+	
+	updateNumberInputClasses();
+	
+	</script>
+  </body>
+</html>
