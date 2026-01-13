@@ -157,7 +157,7 @@
 		<a href="https://instagram.com/yzahkin">Photography Insta</a>
 		<a href="https://cults3d.com/en/users/yzahkin/3d-models">Cults 3D</a>
 		<a href="https://yzahkin.itch.io/">Itch.io</a>
-		<h2>Blog in 2025? Why not?!</h2>
+		<h2>Blog in <span class="theyearofourlord">2025</span>? Why not?!</h2>
 		<a href="https://akosirkal.blog/" id="akosirkal">Ákos Irkál</a>
 	</div>
 	
@@ -176,7 +176,7 @@
 		<a href="https://instagram.com/yzahkin">Fotós Insta</a>
 		<a href="https://cults3d.com/en/users/yzahkin/3d-models">Cults 3D</a>
 		<a href="https://yzahkin.itch.io/">Itch.io</a>
-		<h2>Blog 2025-ben? Miért ne?!</h2>
+		<h2>Blog <span class="theyearofourlord">2025</span>-ben? Miért ne?!</h2>
 		<a href="https://akosirkal.blog/" >Ákos Irkál</a>
 	</div>
 	  <div id="deadspace"></div>
@@ -203,7 +203,13 @@
 			en.style.display = 'block';
 			hu.style.display = 'none';
 		  });
-		
+			
+		  const theactualyearofourlord = new Date().getFullYear();
+		  const yearElements = document.querySelectorAll('.theyearofourlord');
+			
+		   yearElements.forEach(el => {
+		   		el.textContent = theactualyearofourlord;
+		   });
 		   console.error("you are hacked... just kidding. You shouldn't be here. This is a HTML site. Nothing is here!");
 		</script>
   </body>
